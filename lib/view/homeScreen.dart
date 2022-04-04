@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -98,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       controller: passwordController,
                       hint: 'Password',
                       prefixIcon: Icons.lock,
-                      suffixIcon: Icons.remove_red_eye,
+                      suffixIcon: suffix,
                       isPassword: isPassword,
                       validate: (value) {
                         if (value.isEmpty) {

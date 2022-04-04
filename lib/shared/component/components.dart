@@ -65,15 +65,7 @@ Widget customizedNavBar({
   required var onItemTapped,
 }) =>
     Container(
-      decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: buttonColor2.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 12,
-          ),
-        ],
-      ),
+      decoration: customizedBox(),
       child: ClipRRect(
         child: BottomNavigationBar(
           unselectedItemColor: buttonColor2.withOpacity(0.3),
@@ -222,3 +214,66 @@ Widget customizedHeader({
         height: 20.0,
       ),
     ]);
+
+BoxDecoration customizedBox() => BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(26.0),
+      boxShadow: [
+        BoxShadow(
+          color: buttonColor2.withOpacity(0.3),
+          spreadRadius: 2,
+          blurRadius: 7,
+        ),
+      ],
+    );
+
+Widget listItem() => Container(
+      height: 85.0,
+      width: double.infinity,
+      decoration: customizedBox(),
+      child: Padding(
+        padding: const EdgeInsets.all(
+          17.0,
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(13.0),
+                color: Colors.teal,
+              ),
+            ),
+            SizedBox(
+              width: 18.0,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Text(
+                    'Antibiotic',
+                    style: TextStyle(
+                      color: TextColor1,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  Text(
+                    'everyday at 6:00 PM',
+                    style: TextStyle(
+                      color: TextColor1,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Checkbox(value: false, onChanged: (value) {}),
+          ],
+        ),
+      ),
+    );

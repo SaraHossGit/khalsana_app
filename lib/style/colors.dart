@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // Color defaultColor=Colors.deepOrange;
 const backgroundColor = const Color(0xFFFFF7F8);
+const backgroundColor2 = const Color(0xFFFFA69E);
 const buttonColor1 = const Color(0xFFA9F0D1);
 const buttonColor2 = const Color(0xFFFF7E6B);
 const TextColor1 = const Color(0xFF8C5E58);

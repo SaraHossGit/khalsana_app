@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khalsana_app/style/colors.dart';
-import 'package:khalsana_app/view/homeScreen.dart';
+import 'package:khalsana_app/view/loginScreen.dart';
 
 void main() {
   runApp(MyApp());

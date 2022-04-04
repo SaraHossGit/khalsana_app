@@ -185,3 +185,40 @@ Widget productItem({
         ),
       ),
     );
+
+Widget customizedHeader({
+  required String title,
+}) =>
+    Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      SizedBox(
+        height: 22.0,
+      ),
+
+      // Title + Profile Pic.
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: TextColor1,
+              fontWeight: FontWeight.bold,
+              fontSize: 30.0,
+            ),
+          ),
+          SizedBox(
+            width: 60.0,
+          ),
+          CircleAvatar(
+            radius: 25.0,
+            backgroundImage: AssetImage(
+              'images/user.png',
+            ),
+          ),
+        ],
+      ),
+      SizedBox(
+        height: 20.0,
+      ),
+    ]);

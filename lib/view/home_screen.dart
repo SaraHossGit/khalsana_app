@@ -20,38 +20,8 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 22.0,
-              ),
-
-              // Title + Profile Pic.
-              Row(
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  Text(
-                    "Deals Dashboard",
-                    style: TextStyle(
-                      color: TextColor1,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 60.0,
-                  ),
-                  Expanded(
-                    child: CircleAvatar(
-                      radius: 25.0,
-                      backgroundImage: AssetImage(
-                        'images/user.png',
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
+              //Header
+              customizedHeader(title: "Home"),
 
               // Search Bar + Scanner
               Row(

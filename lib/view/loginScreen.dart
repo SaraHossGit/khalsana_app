@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 3),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomeScreen())));
+            context, MaterialPageRoute(builder: (context) => LoginScreen())));
   }
 
   @override
@@ -39,14 +39,14 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   bool isPassword = true;
@@ -111,8 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         setState(() {
                           isPassword = !isPassword;
                           suffix = isPassword
-                              ? Icons.remove_red_eye
-                              : Icons.visibility_off_sharp;
+                              ? Icons.visibility_off_sharp
+                              : Icons.remove_red_eye;
                         });
                       },
                       keyboardType: TextInputType.visiblePassword,

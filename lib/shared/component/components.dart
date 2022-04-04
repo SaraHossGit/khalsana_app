@@ -141,3 +141,47 @@ Widget customizedHeadline({
         height: 15.0,
       ),
     ]);
+
+Widget productItem({
+  required Color borderColor,
+  required String productImage,
+  required String productName,
+}) =>
+    Container(
+      width: 150.0,
+      height: 135.0,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        border: Border.all(
+          color: borderColor,
+          width: 3,
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            Image(
+              height: 65.0,
+              image: AssetImage(
+                productImage,
+              ),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              productName,
+              maxLines: 2,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 13.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:khalsana_app/style/colors.dart';
-import 'package:khalsana_app/view/loginScreen.dart';
+import 'package:khalsana_app/view/login_screen.dart';
 
 void main() {
   runApp(MyApp());

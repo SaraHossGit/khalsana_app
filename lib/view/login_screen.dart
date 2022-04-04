@@ -3,11 +3,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:khalsana_app/view/registerScreen.dart';
+import 'package:khalsana_app/view/register_screen.dart';
 
 import '../shared/component/components.dart';
 import '../style/colors.dart';
-import 'dealsDashboard.dart';
+import 'navigationPage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => DealsDashboard()));
+                                    builder: (context) => NavigationPage()));
                           }
                         },
                         child: Text(

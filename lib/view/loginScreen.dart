@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
   bool isPassword = true;
-  IconData suffix = Icons.remove_red_eye;
+  IconData suffix = Icons.visibility_off_sharp;
   var formKey = GlobalKey<FormState>();
 
   @override

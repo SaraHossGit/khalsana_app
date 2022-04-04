@@ -79,6 +79,8 @@ Widget customizedNavBar({
           unselectedItemColor: buttonColor2.withOpacity(0.3),
           selectedItemColor: buttonColor2,
           type: BottomNavigationBarType.fixed,
+          currentIndex: selectedIndex,
+          onTap: onItemTapped,
           items: const [
             BottomNavigationBarItem(
               icon: Icon(Icons.home_rounded),
@@ -97,8 +99,6 @@ Widget customizedNavBar({
               label: 'Profile',
             ),
           ],
-          currentIndex: selectedIndex,
-          onTap: onItemTapped,
         ),
       ),
     );

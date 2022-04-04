@@ -24,13 +24,13 @@ class _DealsDashboardState extends State<DealsDashboard> {
     // ignore: prefer_const_literals_to_create_immutables
     return Scaffold(
       floatingActionButton: Transform.rotate(
-        angle: 40,
+        angle: 40.05,
         child: FloatingActionButton(
           foregroundColor: backgroundColor, //Color of the "add" icon
           splashColor: buttonColor2, //Color when the icon is pressed
           onPressed: () {},
           child: Transform.rotate(
-              angle: 40,
+              angle: 40.05,
               child: const Icon(
                 Icons.add,
                 size: 35.0,

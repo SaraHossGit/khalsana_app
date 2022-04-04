@@ -69,18 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       'images/5alsana.png',
                     ),
                   ),
-                  // Text(
-                  //   'LOGIN',
-                  //   style: TextStyle(
-                  //     fontSize: 20.0,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
                   SizedBox(
                     height: 20,
                   ),
                   Container(
-                    child: defaultTextForm(
+                    child: customizedTextForm(
                       validate: (value) {
                         if (value.isEmpty) {
                           return 'Email must not be empty';
@@ -96,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10,
                   ),
                   Container(
-                    child: defaultTextForm(
+                    child: customizedTextForm(
                       controller: passwordController,
                       hint: 'Password',
                       prefixIcon: Icons.lock,

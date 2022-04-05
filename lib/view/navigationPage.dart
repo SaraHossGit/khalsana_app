@@ -3,12 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:khalsana_app/style/colors.dart';
+import 'package:khalsana_app/view/deals/deals_popup.dart';
 import 'package:khalsana_app/view/profile_screen.dart';
-import 'package:khalsana_app/view/reminder_screen.dart';
+import 'package:khalsana_app/view/reminders/reminder_screen.dart';
 import '../shared/component/components.dart';
 import '../shared/cubit/cubit.dart';
 import '../shared/cubit/cubit_states.dart';
-import 'deals_dashboard_screen.dart';
+import 'deals/deals_dashboard_screen.dart';
 import 'home_screen.dart';
 
 class NavigationPage extends StatelessWidget {
@@ -27,7 +28,10 @@ class NavigationPage extends StatelessWidget {
         child: BlocConsumer<AppCubit, AppStates>(
           listener: (context, state) {},
           builder: (context, state) => Scaffold(
-            floatingActionButton: customizedFloatingActionButton(),
+            floatingActionButton: customizedFloatingActionButton(pressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => DealsPopUp()));
+            }),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: customizedNavBar(

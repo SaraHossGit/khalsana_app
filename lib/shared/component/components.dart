@@ -60,6 +60,33 @@ Widget defaultSearchBar() => Container(
       ),
     );
 
+Widget customizedField({
+  required var controller,
+  var tapMethod,
+  TextInputType keyboard = TextInputType.text,
+  required String hint,
+  required validate,
+}) =>
+    TextFormField(
+      textCapitalization: TextCapitalization.words,
+      controller: controller,
+      validator: validate,
+      keyboardType: keyboard,
+      onTap: tapMethod,
+      decoration: InputDecoration(
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.0),
+          borderSide: BorderSide(color: Color(0xffD7D7D7)),
+        ),
+        hintText: hint,
+        border: OutlineInputBorder(),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15.0),
+          borderSide: BorderSide(color: buttonColor1),
+        ),
+      ),
+    );
+
 Widget customizedNavBar({
   required var selectedIndex,
   required var onItemTapped,
@@ -95,12 +122,15 @@ Widget customizedNavBar({
       ),
     );
 
-Widget customizedFloatingActionButton() => Transform.rotate(
+Widget customizedFloatingActionButton({
+  required var pressed,
+}) =>
+    Transform.rotate(
       angle: 40.05,
       child: FloatingActionButton(
         foregroundColor: backgroundColor, //Color of the "add" icon
         splashColor: buttonColor2, //Color when the icon is pressed
-        onPressed: () {},
+        onPressed: pressed,
         child: Transform.rotate(
             angle: 40.05,
             child: const Icon(

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:khalsana_app/style/colors.dart';
 
-import '../shared/component/components.dart';
+import '../../shared/component/components.dart';
 
 class ReminderScreen extends StatefulWidget {
   const ReminderScreen({Key? key}) : super(key: key);

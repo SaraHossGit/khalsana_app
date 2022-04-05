@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:khalsana_app/view/register_screen.dart';
 
@@ -115,30 +116,33 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10,
                   ),
                   Container(
-                    // child: state is LoginLoadingState? Center(child: CircularProgressIndicator(),):
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        color: buttonColor1,
-                      ),
-                      width: double.infinity,
-                      child: MaterialButton(
-                        onPressed: () {
-                          if (formKey.currentState!.validate()) {
-                            print(emailController.text);
-                            print(passwordController.text);
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15.0),
+                      color: buttonColor1,
+                    ),
+                    width: double.infinity,
+                    child: MaterialButton(
+                      onPressed: () async {
+                        if (formKey.currentState!.validate()) {
+                          var result = await FirebaseAuth.instance
+                              .signInWithEmailAndPassword(
+                                  email: emailController.text,
+                                  password: passwordController.text);
 
+                          if (result != null) {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => NavigationPage()));
+                          } else {
+                            print('user not found');
                           }
-                        },
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
+                        }
+                      },
+                      child: Text(
+                        'LOGIN',
+                        style: TextStyle(
+                          color: Colors.white,
                         ),
                       ),
                     ),

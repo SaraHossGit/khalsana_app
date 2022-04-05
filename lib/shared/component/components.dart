@@ -227,7 +227,10 @@ BoxDecoration customizedBox() => BoxDecoration(
       ],
     );
 
-Widget listItem() => Container(
+Widget listItem({
+  required var changedMethod,
+}) =>
+    Container(
       height: 85.0,
       width: double.infinity,
       decoration: customizedBox(),
@@ -272,7 +275,7 @@ Widget listItem() => Container(
                 ],
               ),
             ),
-            Checkbox(value: false, onChanged: (value) {}),
+            // Checkbox(value: false, onChanged: ChangedMethod),
           ],
         ),
       ),

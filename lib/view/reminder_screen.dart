@@ -89,7 +89,12 @@ class _ReminderScreenState extends State<ReminderScreen> {
             Expanded(
               child: ListView.separated(
                 physics: BouncingScrollPhysics(),
-                itemBuilder: (context, index) => listItem(),
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: listItem(changedMethod: () {
+                    setState(() {});
+                  }),
+                ),
                 separatorBuilder: (context, index) => SizedBox(
                   height: 30.0,
                 ),

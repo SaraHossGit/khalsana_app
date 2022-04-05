@@ -6,7 +6,7 @@ Future<bool> addDeal(String medName, String expDate, String quantity,
   try {
     DocumentReference documentReference = FirebaseFirestore.instance
         .collection('Users')
-        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .doc('Data')
         .collection('Deals')
         .doc(medName);
 

@@ -87,19 +87,39 @@ class _ReminderScreenState extends State<ReminderScreen> {
 
             //List
             Expanded(
-              child: ListView.separated(
-                physics: BouncingScrollPhysics(),
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: listItem(changedMethod: () {
-                    setState(() {});
-                  }),
-                ),
-                separatorBuilder: (context, index) => SizedBox(
-                  height: 30.0,
-                ),
-                itemCount: 10,
-              ),
+              child: isToday
+                  ? Center(
+                      child: Column(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Image(
+                            image: AssetImage('images/noReminders.png'),
+                            height: 200.0,
+                            width: 200.0,
+                          ),
+                          Text(
+                            'You have no reminders for Today',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: TextColor1,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : ListView.separated(
+                      physics: BouncingScrollPhysics(),
+                      itemBuilder: (context, index) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: listItem(changedMethod: (val) {
+                          setState(() {});
+                        }),
+                      ),
+                      separatorBuilder: (context, index) => SizedBox(
+                        height: 30.0,
+                      ),
+                      itemCount: 10,
+                    ),
             ),
           ],
         ),

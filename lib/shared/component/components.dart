@@ -275,7 +275,7 @@ Widget listItem({
                 ],
               ),
             ),
-            // Checkbox(value: false, onChanged: ChangedMethod),
+            Checkbox(value: false, onChanged: changedMethod),
           ],
         ),
       ),

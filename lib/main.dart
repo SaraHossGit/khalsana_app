@@ -11,7 +11,7 @@ import 'package:khalsana_app/view/login_screen.dart';
 
 void main() {
   BlocOverrides.runZoned(
-    () {
+    ( ) {
       runApp(MyApp());
     },
     blocObserver: SimpleBlocObserver(),

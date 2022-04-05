@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "775049390142",
+    "project_id": "khalsanaapp",
+    "storage_bucket": "khalsanaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775049390142:android:8c8f05b4416df1f859096f",
+        "android_client_info": {
+          "package_name": "com.example.khalsana_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775049390142-qlukdmro7dn5cmcdgdbjoco72a0atr3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.khalsana_app",
+            "certificate_hash": "520c84fb19cf97862eafdc0d7a7fc65bde50a4f1"
+          }
+        },
+        {
+          "client_id": "775049390142-54ct8htb4vf5192339k49p72cf8uivoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlgLxHUZMIm3PV5Nc4oSzfJjeXPiD62XQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775049390142-54ct8htb4vf5192339k49p72cf8uivoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
